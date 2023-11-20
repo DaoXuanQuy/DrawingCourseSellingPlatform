@@ -1,0 +1,200 @@
+plugins {
+    id 'org.springframework.boot' version '2.7.13'
+    id 'io.spring.dependency-management' version '1.1.0'
+    id 'java'
+}
+
+group = 'vn.hcmute'
+version = '0.0.1-SNAPSHOT'
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+ext {
+
+    /**
+     * Jackson
+     */
+    jacksonBomVersion = '2.13.5'
+
+    /**
+     * Keycloak
+     */
+    keycloakversion = '21.1.1'
+
+    /**
+     * Mysql
+     */
+    mysqlVersion = '8.0.33'
+
+    /**
+     * Spring Boot
+     */
+    springBootVersion = '2.7.13'
+
+    /**
+     * Spring Doc
+     */
+    springDocVersion = '1.7.0'
+
+    /**
+     * Utils
+     */
+    lombokVersion = '1.18.28'
+    mapstructVersion = '1.5.5.Final'
+    poiVersion = '5.2.3'
+    gsonVersion = '2.10.1'
+    minioVersion = '7.1.4'
+    modelMapperVersion = '2.3.0'
+
+    /**
+     * Websocket
+     */
+    stompWebsocketVersion = '2.3.3'
+
+    /**
+     * Workflow
+     */
+    cadenceWorkflowVersion = '3.8.1'
+}
+
+repositories {
+    //mavenNexus()
+    mavenCentral()
+    mavenLocal()
+    maven {
+        url 'https://git.sunshinetech.vn/api/v4/projects/1460/packages/maven'
+        name "GitLab"
+        credentials(HttpHeaderCredentials) {
+            name = 'Deploy-Token'
+            value = 'LzRo66MtDtxara-pA5-a'
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+    maven {
+        url 'https://git.sunshinetech.vn/api/v4/projects/1495/packages/maven'
+        name "GitLab2"
+        credentials(HttpHeaderCredentials) {
+            name = 'Private-Token'
+            value = 'ectj7NtKSpvAeZ5BZk_Z'
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+}
+
+dependencyManagement {
+    imports {
+        mavenBom "org.springframework.boot:spring-boot-dependencies:$springBootVersion"
+        mavenBom "com.fasterxml.jackson:jackson-bom:$jacksonBomVersion"
+        mavenBom "org.keycloak.bom:keycloak-adapter-bom:$keycloakversion"
+    }
+}
+dependencies {
+
+    /**
+     * Spring
+     */
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'org.springframework.boot:spring-boot-starter-websocket'
+
+    implementation 'org.springframework.boot:spring-boot-starter-security'
+    implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
+
+    implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+    implementation 'org.springframework.boot:spring-boot-starter-data-mongodb'
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
+    implementation 'org.springframework.boot:spring-boot-starter-validation'
+
+    implementation 'org.springframework.boot:spring-boot-starter-mail'
+    implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+
+    implementation 'org.springframework.boot:spring-boot-starter-aop'
+    implementation 'org.springframework.boot:spring-boot-devtools'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+    /**
+     * Database
+     */
+//    implementation "com.mysql:mysql-connector-j:$mysqlVersion"
+    implementation 'org.postgresql:postgresql:42.6.0'
+    implementation 'redis.clients:jedis'
+
+    /**
+     * Jackson
+     */
+    implementation "com.fasterxml.jackson.core:jackson-databind"
+    implementation "com.fasterxml.jackson.core:jackson-core"
+    implementation "com.fasterxml.jackson.core:jackson-annotations"
+
+    /**
+     * Keycloak
+     */
+    implementation "org.keycloak:keycloak-spring-boot-starter"
+    implementation "org.keycloak:keycloak-spring-security-adapter"
+    implementation "org.keycloak:keycloak-admin-client:$keycloakversion"
+
+//    /**
+//     * Payment SDK
+//     */
+//    implementation 'vn.unicloud.sdk:payment:0.0.3-SNAPSHOT'
+
+    /**
+     * Spring Doc
+     */
+    implementation "org.springdoc:springdoc-openapi-ui:$springDocVersion"
+    implementation "org.springdoc:springdoc-openapi-data-rest:$springDocVersion"
+
+    /**
+     * Utils
+     */
+    // Json
+    implementation "com.google.code.gson:gson:$gsonVersion"
+
+    // Lombok
+    compileOnly "org.projectlombok:lombok:$lombokVersion"
+    annotationProcessor "org.projectlombok:lombok:$lombokVersion"
+
+    // Mapstruct
+    implementation "org.mapstruct:mapstruct:$mapstructVersion"
+    annotationProcessor "org.mapstruct:mapstruct-processor:$mapstructVersion"
+
+    // Minio
+    implementation "io.minio:minio:$minioVersion"
+
+    // Apache POI
+    implementation "org.apache.poi:poi:$poiVersion"
+    implementation "org.apache.poi:poi-ooxml:$poiVersion"
+
+    // Other
+    implementation "org.modelmapper:modelmapper:$modelMapperVersion"
+
+    /**
+     *  Websocket
+     */
+    implementation "org.webjars:stomp-websocket:$stompWebsocketVersion"
+
+    /**
+     * Workflow
+     */
+    implementation "com.uber.cadence:cadence-client:$cadenceWorkflowVersion"
+}
+
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+tasks.named("bootJar") {
+	layered {
+		includeLayerTools = true
+	}
+}
+

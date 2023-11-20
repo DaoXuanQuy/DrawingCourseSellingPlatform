@@ -1,0 +1,19 @@
+stages:
+  - pipeline
+
+variables:
+  GROUP: hcmute
+  NAME: e-learning-cms
+  SERVICE_NAME: "${GROUP}-${NAME}"
+  IMAGE_NAME: "${GROUP}/${NAME}"
+  ECR_REGISTRY: ecr.tiktzuki.com
+
+auto-ci-dev:
+  stage: pipeline
+  rules:
+    - if: $CI_COMMIT_REF_NAME == "admin"
+      variables:
+        ENV_DEPLOY: $ENV_DEV
+  trigger:
+    include: ci/$CI_COMMIT_REF_NAME.yml
+    strategy: depend

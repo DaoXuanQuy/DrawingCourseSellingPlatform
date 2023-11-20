@@ -1,0 +1,52 @@
+.detail-post {
+  .user-post {
+    padding: 16px;
+    background: #e2e3e5;
+    border-right: 1px solid #c3c6c9;
+    border-radius: 6px;
+  }
+  .content-post {
+    position: relative;
+    padding: 8px 24px !important;
+    border-top: 1px solid #c3c6c9;
+    border-right: 1px solid #c3c6c9;
+    border-bottom: 1px solid #c3c6c9;
+    border-radius: 6px;
+    &::after {
+      position: absolute;
+      top: 40px;
+      left: -12px;
+      display: block;
+      border: 14px solid transparent;
+      border-right-color: #fff;
+      border-left-width: 0;
+      content: '';
+    }
+  }
+  .actions {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    justify-content: end;
+    .icon {
+      display: flex;
+      align-items: end;
+      font-size: 24px;
+      cursor: pointer;
+      .total-reaction {
+        font-size: 16px;
+        line-height: 16px;
+      }
+    }
+  }
+  .ql-editor {
+    height: auto;
+  }
+}
+.vertical-center {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+  justify-content: center;
+}

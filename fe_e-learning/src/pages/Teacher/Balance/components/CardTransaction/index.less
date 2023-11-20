@@ -1,0 +1,57 @@
+.card-transaction {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  .content {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+    color: #111827;
+    font-style: normal;
+  }
+  .title {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+  }
+  .date {
+    color: #6b7280;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .trans-no {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .amount-in {
+    color: #0e9f6e;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 28px;
+  }
+  .amount-out {
+    color: #f05252;
+    font-weight: 400;
+    font-size: 20px;
+    font-style: normal;
+    line-height: 28px;
+  }
+  &:hover {
+    opacity: 0.6;
+  }
+  .status {
+    .ant-tag {
+      border-radius: 8px;
+    }
+  }
+  .info-amount {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+  }
+}

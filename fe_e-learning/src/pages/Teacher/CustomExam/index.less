@@ -1,0 +1,84 @@
+.custom-exam {
+  min-height: 75vh;
+  .text-heading {
+    font-weight: 600;
+    font-size: 20px;
+  }
+  .single-question {
+    width: 85vw;
+    margin: 8px 0;
+    font-weight: 400;
+    font-size: 16px;
+  }
+  .options {
+    display: flex !important;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 40px;
+  }
+  .normal-text {
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    p {
+      display: inline;
+    }
+  }
+  .ant-checkbox-wrapper {
+    margin: 0 !important;
+  }
+  .input-fill {
+    max-width: 120px;
+    height: 18px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #cecece;
+    &:focus-visible {
+      outline: none;
+    }
+  }
+  .input-fill&:focus-visible {
+    border: none;
+    border-bottom: 1px solid #cecece;
+  }
+  .long-text {
+    overflow: auto; /* Ẩn nội dung vượt quá khung chứa */
+    word-wrap: break-word; /* Cho phép xuống dòng khi cần thiết */
+    p {
+      display: inline;
+    }
+  }
+  .ant-checkbox-wrapper {
+    width: fit-content !important;
+    cursor: pointer !important;
+  }
+  .ant-input-number {
+    width: 100% !important;
+  }
+  .question-action {
+    margin: 2px 0 !important;
+    padding: 2px 0 !important;
+  }
+  .ql-toolbar {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+  }
+  .question-edit {
+    .ql-editor,
+    .ql-container {
+      min-height: 100px;
+    }
+  }
+  .question-no-edit {
+    .ql-editor,
+    .ql-container {
+      // min-height: 100px;
+      padding: 0;
+    }
+  }
+  .ql-container {
+    background-color: #fff;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
+  }
+}

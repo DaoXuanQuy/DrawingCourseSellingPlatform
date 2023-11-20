@@ -1,0 +1,14 @@
+student:     hhien24012002@gmail.com          12345678
+	     xquy118@gmail.com 		      12345678
+	     tranminhngocphuc16@gmail.com     123456
+teacher:     minhcangthang@gmail.com	      12345678
+
+staff: 0987654343 T1234567#
+
+admin: 0987654333  12345678
+
+Thanh toán: Ngân hàng:	NCB
+Số thẻ:	9704198526191432198
+Tên chủ thẻ:	NGUYEN VAN A
+Ngày phát hành:	07/15
+Mật khẩu OTP:	123456

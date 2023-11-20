@@ -1,0 +1,18 @@
+<configuration scan="true">
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <Target>System.out</Target>
+        <encoder>
+            <pattern>%d{dd-MM-yy HH:mm:ss} %highlight(%-2level) %cyan(%logger{15}):%L - %m%n</pattern>
+        </encoder>
+        <withJansi>true</withJansi>
+    </appender>
+
+    <logger name="vn.fpt.elearning" level="TRACE" />
+    <logger name="vn.unicloud" level="DEBUG" />
+<!--    <logger name="vn.hcmute" level="DEBUG" />-->
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+    </root>
+
+</configuration>

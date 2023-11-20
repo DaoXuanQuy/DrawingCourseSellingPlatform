@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "jsx": "react-jsx",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "types": ["react", "react-dom", "dotenv"],
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <link rel="shortcut icon" href="./javascript.svg" type="image/x-icon" />
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: "Roboto", sans-serif;
+            position: relative;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        header {
+            background: #096dd9;
+            padding: 24px;
+            display: flex;
+        }
+
+        .btn-login span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #f6f8f8;
+        }
+
+        .content {
+            margin: 16px 40px;
+        }
+
+        footer {
+            background: #096dd9;
+            padding: 32px 24px;
+            color: #e2e7e9;
+            gap: 25px;
+        }
+
+        footer .description a {
+            color: #6875ca;
+            cursor: pointer;
+        }
+
+        footer .links {
+            text-align: center;
+        }
+
+        footer .links li {
+            list-style-type: none;
+            text-decoration: underline;
+            font-weight: 400;
+            margin: 0 4px;
+            font-size: 14px;
+            line-height: 22px;
+            display: inline-block;
+        }
+
+        footer .copyright {
+            text-align: center;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 22px;
+        }
+        .content-header h3 {
+            margin: 8px 0;
+        }
+
+        .content-button {
+            background: #096dd9;
+            max-width: 154px;
+            padding: 16px;
+            text-align: center;
+            border-radius: 4px;
+            margin: 12px 0;
+            cursor: pointer;
+        }
+        .content-button a {
+            text-decoration: none;
+            color: #fff;
+            font-size: 16px
+        }
+        .logo img{
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <div class="logo">
+            <img  alt="Uni eKYC" src="https://ekyc-dashboard.hcm.unicloud.ai/icons/icon-logo.svg"/>
+        </div>
+    </header>
+    <div class="content">
+        <div class="content-header">
+            <h3>Chào mừng bạn đến với E-Learning !</h3>
+            <p th:text="${content}"></p>
+        </div>
+        <div class="content-button">
+            <a th:href="${url}" th:text="${actionName}"></a>
+        </div>
+        <div class="content-footer">
+            <strong>Thân ái!</strong>
+            <p>E-Learning Team.</p>
+        </div>
+    </div>
+    <footer>
+        <div class="links">
+            <ul>
+                <li><span>Terms</span></li>
+                <li><span>Privacy</span></li>
+                <li><span>Cookies</span></li>
+                <li><span>Contact us</span></li>
+            </ul>
+        </div>
+        <div class="copyright">
+            <p>© 2022 HCMUTE</p>
+            <p>
+                Số 1, đường Võ Văn Ngân, phường Linh Chiểu, TP Thủ Đức, Hồ Chí Minh
+            </p>
+        </div>
+    </footer>
+</div>
+</body>
+</html>

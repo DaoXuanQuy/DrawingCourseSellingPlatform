@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .container{
+      width: 656px;
+      height: 624px;
+      margin: auto;
+    }
+
+    /* header css */
+    .header {
+      overflow: hidden;
+      height: 104px;
+      width: 656px;
+      display: flex;
+      background-image: url("https://dev-umee.ssf.vn/media/api/preview/v1/public/umee-pay/icons/umee-pay_1672297559194_2022-12-29_395.jpg");
+      background-size: cover;
+    }
+    .store {
+      height: 56px;
+      display: flex;
+      padding: 24px 32px;
+    }
+    .store p {
+      margin: 0;
+      min-width: 100px;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      padding: 16px 12px;
+      color: #FFFFFF;
+      z-index: 999;
+    }
+    /* body css */
+    .body {
+      height: auto;
+    }
+
+    .wrapper {
+      background: url("https://dev-umee.ssf.vn/media/api/preview/v1/public/umee-pay/icons/umee-pay_1672297515306_2022-12-29_136.jpg");
+      overflow: hidden;
+      height: auto;
+      background-size: cover;
+    }
+
+    .info {
+      padding: 24px 32px;
+    }
+    .text-info {
+      width: 100%;
+    }
+    .text-info p {
+      margin: 0;
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #111827;
+    }
+    .text-normal {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      white-space: nowrap;
+      max-width: 240px;
+      margin: auto;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      gap: 8px;
+      align-self: stretch;
+    }
+    .thanks-to {
+      width: 496px;
+      height: 48px;
+    }
+    .divider {
+      border: 1px solid #F3F4F6;
+      margin: 24px 0
+    }
+
+    /* footer css */
+    .footer {
+      height: 66px;
+      background: #F2F6FF;
+    }
+    .rec20{
+      height: 2px;
+      background: linear-gradient(90deg, rgba(0, 220, 220, 0.8) 0%, rgba(140, 115, 255, 0.8) 50%, rgba(60, 120, 255, 0.8) 100%);
+    }
+    .content-footer {
+      height: 32px;
+      padding: 16px 32px;
+      vertical-align: middle;
+    }
+    .content-footer p {
+      font-family: 'Roboto';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      height: 20px;
+      color: #6B7280;
+      margin: 0;
+      padding: 6px 0;
+    }
+    wbr {display: none;}
+  </style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="store">
+      <img alt="" style="height: 56px; width: 56px; z-index: 99;" src="https://api-minio.unicloud.com.vn/e-learning/public/Logo.png" />
+      <p>
+        E-Learning
+      </p>
+    </div>
+  </div>
+  <div class="body">
+    <div class="wrapper">
+      <div class="info">
+        <div class="text-info">
+          <p style="margin-bottom: 8px;">Xin chào Quý khách <strong>[(${customerName})]</strong></p>
+          <p>Quý khách đã đăng ký tài khoản thành công.</p>
+          <p style="margin: 24px 0;">Để kích hoạt tài khoản, xin vui lòng click vào đường dẫn sau. <a href="[(${activeURL})]">Kích hoạt ngay</a>
+          </p>
+          <div class="thanks">
+            <p class="normal-text">Trân trọng cảm ơn,</p>
+            <p class="normal-text"><strong>E-Learning</strong></p>
+          </div>
+          <hr class="divider" />
+          <p class="normal-text">Thông báo được tự động gửi đi từ hệ thống của chúng tôi, vui lòng không trả lời email này</p>
+          <hr class="divider" />
+          <div class="footer-body">
+            <p class="normal-text">
+              <strong>Hotline 24/7: </strong> (+84) 123456789
+            </p>
+            <p class="normal-text">
+              <strong>Email: </strong> Chamsockhachhang@elearning.com
+            </p>
+            <p class="normal-text">
+              <strong>Website: </strong> E-Learning
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="vector786"></div>
+    </div>
+  </div>
+  <div class="footer">
+    <div class="rec20"></div>
+    <div class="content-footer">
+      <table style="width: 100%;">
+        <tr>
+          <td>
+            <p>Powered by E-Learning</p>
+          </td>
+          <td style="text-align: right;">
+            <img style="margin-right: 12px" src="https://dev-umee.ssf.vn/media/api/preview/v1/public/umee-pay/icons/umee-pay_1672281393051_2022-12-29_952.png" alt="" />
+            <img src="https://dev-umee.ssf.vn/media/api/preview/v1/public/umee-pay/icons/umee-pay_1672281513513_2022-12-29_465.png" alt="" />
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</div>
+</body>
+</html>

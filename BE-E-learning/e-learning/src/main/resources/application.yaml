@@ -1,0 +1,196 @@
+url:
+  re-active: ${URL_RE_ACTIVE:http://localhost:8000/auth/verify/re-active}
+  verify-email: ${URL_VERIFY_EMAIL:http://localhost:8000/auth/verify/email}
+  forgot-password: ${URL_FORGOT_PASSWORD:http://localhost:8000/reset-password}
+  fail-url-form: ${URL_FAILED_TRANSACTION_FORM:http://localhost:8000/invoice/failed/%s/%s}
+  success-url-form: ${URL_SUCCESS_TRANSACTION_FORM:http://localhost:8000/invoice/success/%s/%s}
+  vnpay-success-url-form: ${VNPAY_URL_SUCCESS_TRANSACTION_FORM:https://e-learning.tiktzuki.com/register-course/success/vnpay/%s}
+  portal: ${URL_PORTAL:http://localhost:8000}
+
+role:
+  teacher: ${ROLE_TEACHER:TEACHER}
+  admin: ${ROLE_ADMIN:ADMIN}
+  student: ${ROLE_STUDENT:STUDENT}
+
+ekyc-service:
+  host: ${EKYC_HOST:https://api-uat.unicloud.ai/ekyc-api}
+  key: ${EKYC_KEY:2U4D2dGKsoFws7qYhZSfqSe9UwQoYMuN}
+  endpoint:
+    id-card: ${EKYC_ENPOINT_ID_CARD:/api/ekyc/v1/detect-card/sides}
+
+keycloak:
+  auth-server-url: ${KEYCLOAK_AUTH_SERVER_URL:https://keycloak.fpt-ec.click}
+  ssl-required: ${KEYCLOAK_SSL_REQUIRED:external}
+  resource: ${KEYCLOAK_RESOURCE:e-learning-client}
+  use-resource-role-mappings: 'true'
+  realm: ${KEYCLOAK_REALM:e-learning}
+  credentials:
+    secret: ${KEYCLOAK_CREDENTIALS_SECRET:GhrM15sqf32mtMuP17ulqYWZ03PVnj3Y}
+  bearer-only: 'true'
+
+time:
+  second:
+    expire:
+      token:
+        re-active: '120'
+        forgot-password: '120'
+        register: '120'
+
+spring:
+  main:
+    allow-circular-references: true
+  mail:
+    username: ${MAIL_USERNAME:taipt1504@gmail.com}
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    host: ${MAIL_HOST:smtp.gmail.com}
+    password: ${MAIL_PASSWORD:fbulftsinhiwqnwn}
+    port: ${MAIL_PORT:587}
+    from: ${MAIL_FROM:E-Learning@no-reply}
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: 'true'
+        dialect: org.hibernate.dialect.PostgreSQL81Dialect
+    #        globally_quoted_identifiers: 'true'
+    show-sql: ${SHOW_SQL:true}
+#  data:
+#    mongodb:
+#      username: ${MONGO_USERNAME:root}
+#      password: ${MONGO_PASSWORD:P@ssword789}
+#      database: e-learning-chat
+#      host: ${MONGO_HOST:mongodb.tiktzuki.com}
+#      port: ${MONGO_PORT:37017}
+#      uri: ${CONNECT_DB_URI:mongodb://root:P%40ssword789@mongodb.tiktzuki.com:37017/e-learning-chat?authSource=admin&directConnection=true}
+    redis:
+      repositories:
+        enabled: false
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            client-id: 928374295463-kkscq3g5nncajgbjts8u5ipj3j8e4snq.apps.googleusercontent.com
+            client-secret: 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
+            redirect-uri: '{baseUrl}/oauth2/callback/{registrationId}'
+            scope: '[email, public_profile]'
+  datasource:
+    password: ${DATASOURCE_PASSWORD:1}
+    url: ${DATASOURCE_URL:jdbc:postgresql://192.168.1.4:30432/e_learning}
+    driver-class-name: org.postgresql.Driver
+    username: ${DATASOURCE_USERNAME:e_learning}
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      file-size-threshold: 10MB
+thread:
+  pool:
+    queue-capacity: '100'
+    max-size: '100'
+    keep-alive: '120'
+    core-size: '50'
+redis:
+  port: ${REDIS_PORT:6379}
+  host: ${REDIS_HOST:127.0.0.1}
+  password: ${REDIS_PASSWORD:admin}
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+    enabled: ${SPRING_DOC_ENABLED:true}
+  swagger-ui:
+    enabled: ${SWAGGER_UI_ENABLED:true}
+    operations-sorter: alpha
+    tags-sorter: alpha
+    url: ${server.path}/v3/api-docs
+    oauth2-redirect-url: ${server.path}/swagger-ui/oauth2-redirect.html
+    config-url: ${springdoc.swagger-ui.url}/swagger-config
+    disable-swagger-default-url: true
+  server-url: ${SPRING_DOC_SERVER_URL:http://localhost:${server.port}}${server.path}
+minio:
+  username: ${MINIO_USERNAME:taipt}
+  password: ${MINIO_PASSWORD:Abc123@@}
+  url: ${MINIO_URL:https://api-minio.unicloud.com.vn}
+  bucket: ${MINIO_BUCKET:e-learning}
+  folder-public: ${MINIO_FOLDER_PUBLIC:public}
+  region: ${MINION_REGION:ap-northeast-1}
+address-client:
+  get-all-url: https://provinces.open-api.vn/api/?depth=3
+  get-wards-url: https://provinces.open-api.vn/api/d/%s?depth=2
+  get-districts-url: https://provinces.open-api.vn/api/p/%s?depth=2
+  get-province-url: https://provinces.open-api.vn/api/
+keycloak-client:
+  password: ${KEYCLOAK_CLIENT_PASSWORD:1}
+  username: ${KEYCLOAK_CLIENT_USERNAME:elearning_admin}
+server:
+  port: ${SERVER:8088}
+  path: ${SERVER_REWRITE_PATH:}
+  host: ${SERVER_HOST:http://localhost:${server.port}/${server.path}}
+middleware:
+  host: ${UMEE_MIDDLEWARE_HOST:https://api-flex-staging.kienlongbank.co/pay-middleware}
+  client-id: ${UMEE_MIDDLEWARE_CLIENT_ID:838e919b-ce19-43bf-b338-75adbe045726}
+  secret-key: ${UMEE_MIDDLEWARE_SIGNATURE_KEY:6EB00D84532E5006CF86A237DE038D9A}
+  encrypt-key: ${UMEE_MIDDLEWARE_ENCRYPT_KEY:6EB00D84532E5006CF86A237DE038D9A}
+  accept-time-diff: ${MAX_TIMESTAMP_DIFF_MS:30000}
+klb:
+  payment:
+    host: ${PAY_HOST:https://api-staging.kienlongbank.co/pay}
+    client-id: ${PAY_CLIENT_ID:ffbc53eb-0191-4ba2-a68a-5eeeccf51428}
+    secret-key: ${PAY_SIGNATURE_KEY:y4ULpoFcK7Cb1l4OBh364qZ5wSkMjtJCW4FtFZfbil9rzjs4bn9eWbdJuGLWaGp9eEHB/HU7k9PSwc7J4wjbGZnDIfb/1e6htG9NtduklhH5R8FQLRwxWnRmXlnqcUgPg/K+AxaXdplfXox2vMxwLoLNwr+Qo7wGDATBl/C+cdXgdnYeNQmAxCrUBKKKxjWXFqP2wcxM7JYhF7k85o4EKIRJwJnQmGjM6ZKaz4294M6wDWvK0NruHUqN+wYRAXnH5SrcK+k88DJBIx+o9BipAWulINA3+mOVAHLJ7VAJXD4Hg1YB73uhozGZxrMzpS+T+iW035JbOvNd6GS4MfFNJA==}
+    encrypt-key: ${PAY_ENCRYPT_KEY:4EDDEB54E83AFB428AA1184816AC9F9242DEBE24C1ACAF935427E16A06B4181A}
+    accept-time-diff: ${MAX_TIMESTAMP_DIFF_MS:30000}
+paygate:
+  host: ${PAYGATE_HOST:https://api-staging.kienlongbank.co/paygate}
+  client-id: ${PAYGATE_CLIENT_ID:3d652bdb-0b28-40b0-b3b9-9a665c311291}
+  encrypt-key: ${PAYGATE_ENCRYPT_KEY:61DD4B7827C3F2B0A1D0651043875D80FDFEE027E79E4319B5064490058B16B8}
+  signature-key: ${PAYGATE_SIGNATURE_KEY:tTtLt9oz8blOPAbxS4nHmLgA1POk75k2}
+  max-timestamp-diff-ms: ${MAX_TIMESTAMP_DIFF_MS:18000000}
+  account-no: ${ACCOUNT_NO:24969999}
+  core-bank:
+    get-beneficiary-path: ${GET_BENEFICIARY_PATH:/api/external/corebank/v1/getBeneficiary}
+    get-beneficiary-simple_path: ${GET_BENEFICIARY_SIMPLE_PATH:/api/external/corebank/v1/simple/getBeneficiary}
+    get-balance-path: ${GET_BALANCE_PATH:/api/external/corebank/v1/getBalance}
+    get-balance-simple-path: ${GET_BALANCE_SIMPLE_PATH:/api/external/corebank/v1/simple/getBalance}
+    fund-transfer-path: ${FUND_TRANSFER_PATH:/api/external/corebank/v1/fundTransfer}
+    fund-transfer-simple-path: ${FUND_TRANSFER_SIMPLE_PATH:/api/external/corebank/v1/simple/fundTransfer}
+    query-fund-transfer-path: ${QUERY_FUND_TRANSFER_PATH:/api/external/corebank/v1/queryFundTransfer}
+    query-fund-transfer-simple-path: ${QUERY_FUND_TRANSFER_SIMPLE_PATH:/api/external/corebank/v1/simple/queryFundTransfer}
+
+# ===============================
+# Cadence workflow
+# ===============================
+cadence:
+  host: ${CADENCE_HOST:stream.tiktzuki.com}
+  port: ${CADENCE_PORT:37933}
+  domain: ${CADENCE_DOMAIN:e-learning}
+  retry:
+    default:
+      execution-start-to-close-timeout: ${CADENCE_WF_START_TO_CLOSE:30m}
+      medium-execution-start-to-close-timeout: ${CADENCE_WF_MEDIUM_START_TO_CLOSE:7d}
+      long-execution-start-to-close-timeout: ${CADENCE_WF_LONG_START_TO_CLOSE:14d}
+      activities:
+        default:
+          schedule-to-close-timeout: ${CADENCE_WF_ACT_START_TO_CLOSE:1m}
+          initial-interval: ${CADENCE_WF_ACT_INTERVAL:1m}
+          expiration: ${CADENCE_WF_ACT_EXPIRATION:30m}
+          maximum-attempts: ${CADENCE_WF_ACT_ATTEMPTS:5}
+  workerfactory:
+    max-workflow-thread-count: ${CADENCE_WOKERFACTORY_THREAD:1000}
+    sticky-cache-size: ${CADENCE_WORKERFACTORY_STICKY_CACHE_SIZE:100}
+    disable-sticky-execution: false
+  worker:
+    disabled: null #NotifyTransactionWorkflow,NotifyWorkflow # Vo hieu hoa worker chạy workflow trên instance này bằng khác khai báo workflow classname
+    max-concurrent-activity-execution-size: ${CADENCE_WORKER_ACT_SIZE:100}
+    max-concurrent-workflow-execution-size: ${CADENCE_WORKER_WF_SIZE:100}
+
+vnpay:
+  url: ${VNPAY_URL:https://sandbox.vnpayment.vn/paymentv2/vpcpay.html}
+  terminal-code: ${VNPAY_TERMINAL_CODE:QMFN2L1R}
+  secret: ${VNPAY_SECRET:OJEWZQXAVKPWPJZIZUNKCTOJYDZNTRNC}
+
+fee-service: ${FEE_SERVICE_PERCENT:30}
