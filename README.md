@@ -14,57 +14,57 @@ Nowadays, the need for children to learn how to draw is very large, parents alwa
 
 ### Login & Register
 #### Login
-![Login](readme-assets/login.png)
+![Login](readme-assets/login.jpg)
 #### Register
-![Register](readme-assets/register.png)
+![Register](readme-assets/register.jpg)
 
 ---
 
 ### General
 #### Forgot Password
-![Forgot Password](readme-assets/forgot-password.png)
+![Forgot Password](readme-assets/forgot-password.jpg)
 #### View Personal Information
-![View Personal Information](readme-assets/personal-info.png)
+![View Personal Information](readme-assets/personal-info.jpg)
 
 ---
 
 ### Admin Function:
 #### Manage Staff
-![Manage Staff](readme-assets/manage-staff.png)
+![Manage Staff](readme-assets/manage-staff.jpg)
 #### Manage Instructor
-![Manage Instructor](readme-assets/manage-instructor.png)
+![Manage Instructor](readme-assets/manage-instructor.jpg)
 #### Manage Customer
-![Manage Customer](readme-assets/manage-customer.png)
+![Manage Customer](readme-assets/manage-customer.jpg)
 #### View Statics for Admin
-![View Statics](readme-assets/statics-admin-staff.png)
+![View Statics](readme-assets/statics-admin-staff.jpg)
 
 ---
 
 ### Staff Function:
 #### Manage Instructor
-![Manage Instructor](readme-assets/manage-instructor.png)
+![Manage Instructor](readme-assets/manage-instructor.jpg)
 #### Manage Customer
-![Manage Customer](readme-assets/manage-customer.png)
+![Manage Customer](readme-assets/manage-customer.jpg)
 #### Manage Instructors' courses
-![Manage Instructors' courses](readme-assets/staff-manage-course.png)
+![Manage Instructors' courses](readme-assets/staff-manage-course.jpg)
 #### Manage Forum
-![Manage Forum](readme-assets/manage-forum.png)
+![Manage Forum](readme-assets/manage-forum.jpg)
 #### View Statics for Staff
-![View Statics](readme-assets/statics-admin-staff.png)
+![View Statics](readme-assets/statics-admin-staff.jpg)
 
 ---
 
 ### Instructor Function:
 #### Manage Courses
-![Manage Courses](readme-assets/staff-manage-course.png)
+![Manage Courses](readme-assets/staff-manage-course.jpg)
 #### Update Courses
-![Update Courses](readme-assets/update-course.png)
+![Update Courses](readme-assets/update-course.jpg)
 #### Add Course
-![Add Course](readme-assets/add-course.png)
+![Add Course](readme-assets/add-course.jpg)
 #### Attend Forum
-![Attend Forum](readme-assets/forum.png)
+![Attend Forum](readme-assets/forum.jpg)
 #### View Statics for Instructor
-![View Statics](readme-assets/statics-instructor.png)
+![View Statics](readme-assets/statics-instructor.jpg)
 
 ---
 
@@ -72,14 +72,14 @@ Nowadays, the need for children to learn how to draw is very large, parents alwa
 #### View Course's Information
 ![View Course's Information](readme-assets/course-info.png)
 #### Pay to learn course
-![Pay to learn course](readme-assets/VNPAY-accounting.png)
+![Pay to learn course](readme-assets/VNPAY-accounting.jpg)
 #### View Registered Courses
-![View Registered Courses](readme-assets/registered-courses.png)
+![View Registered Courses](readme-assets/registered-courses.jpg)
 #### View Unregistered Courses
-![View Unregistered Courses](readme-assets/unregistered-courses.png)
+![View Unregistered Courses](readme-assets/unregistered-courses.jpg)
 #### View Order History
-![View Order History](readme-assets/order-history.png)
+![View Order History](readme-assets/order-history.jpg)
 #### Attend Forum
-![Attend Forum](readme-assets/forum.png)
+![Attend Forum](readme-assets/forum.jpg)
 
 
