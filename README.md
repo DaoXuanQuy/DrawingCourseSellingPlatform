@@ -10,6 +10,13 @@ Nowadays, the need for children to learn how to draw is very large, parents alwa
   - Instructor: Allowed to create courses and sell courses on the website. Besides, teachers can view reports on the number and revenue earned from courses purchased by customers.
   - Customer: Allowed to log in to the website, then can search and try courses before deciding to buy.
 
+## Members
+- Our project includes 4 members :
+  - [**Nguyễn Minh Hiền**](https://github.com/hhien205)
+  - [**Đào Xuân Quý**](https://github.com/psp-xuanquy)
+  - [**Nguyễn Văn Minh**](https://github.com/VanMinh15)
+  - [**Trần Minh Ngọc Phúc**](https://github.com/ngocphuc25)
+
 ## Implementation:
 
 ### Login & Register
